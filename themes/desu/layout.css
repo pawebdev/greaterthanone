@@ -1,0 +1,287 @@
+
+/**
+ * @file
+ * Stark layout method
+ *
+ * To avoid obscuring CSS added to the page by Drupal or a contrib module, the
+ * Stark theme itself has no styling, except just enough CSS to arrange the page
+ * in a traditional "Header, sidebars, content, and footer" layout.
+ *
+ * This layout method works reasonably well, but shouldn't be used on a
+ * production site because it can break. For example, if an over-large image
+ * (one that is wider than 20% of the viewport) is in the left sidebar, the
+ * image will overlap with the #content to the right. The exception to this
+ * is IE6 which will just hide the navigation block completely in these
+ * instances due to a positioning bug.
+ */
+
+body{
+	font-family: Arial;
+	margin: 0px;
+}
+
+#sidebar-first,
+#sidebar-second{
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+/*#content {
+  width: 100%;
+}
+body.sidebar-first #content {
+  width: 80%;
+}*/
+body.sidebar-second #content {
+  width: 80%;
+}
+body.two-sidebars #content {
+  width: 60%;
+  left: 20%;
+}
+
+#sidebar-first {
+  width: 20%;
+  left: -80%; /* LTR */
+}
+
+body.two-sidebars #sidebar-first {
+  left: -60%; /* LTR */
+}
+
+#sidebar-second {
+  float: right; /* LTR */
+  width: 20%;
+}
+
+/* Header */
+
+#main{
+	width: 100%;
+}
+
+#header{
+	background-color: #ececec;
+	height: 135px;
+	position: relative;
+}
+
+
+
+a#logo img{
+	position: absolute;
+	display: inline-block;
+	z-index: 100;
+}
+
+#top_social{
+	width: 100%;
+}
+
+#social_icons{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+#blue_bar{
+	position: absolute;
+	top: 50px;
+	background-color: #0096d7;
+	width: 100%;
+	height: 40px;
+	z-index: 0;
+}
+
+/* Content */
+
+#content{
+	width: 1160px;
+	height: 650px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main{
+	height: 650px;
+	text-align: center;
+}
+
+#page-title{
+	display: none;
+}
+
+.front #block-system-main{
+	display: none;
+}
+
+#block-block-4{
+	width: 1160px;
+	overflow: hidden;
+	position: relative;
+}
+
+#together{
+	width: 824px;
+}
+
+#front_p1{
+	margin-top: 50px;
+	text-align: left;
+}
+
+#front_p2{
+	color: #8bd7f8;
+	text-align: left;
+}
+
+.hundred_percent{
+	float: left;
+	font-weight: bold;
+	font-size: 2em;
+	margin-right: 10px;
+}
+
+#bg1{
+	position: absolute;
+	top: 132px;
+	left: 0px;
+	width: 100%;
+	height: 293px;
+	background-color: #ececec;
+	z-index: -1;
+}
+
+#bg2{
+	position: absolute;
+	top: 425px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+	background-color: #d7d7d7;
+	z-index: -1;
+}
+
+
+/* Sidebar */
+
+
+#greater{
+	float: right;
+	width: 310px;
+	margin-left: 20px;
+	text-align: center;
+	font-family: Times;
+}
+
+#greater h2{
+	color: #8a1719;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+#greater table{
+	border: none;
+	width: 310px;
+}
+
+#greater table tr td{
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #004f74;
+}
+
+#greater tbody{
+	border: none;
+}
+
+/* Steering Committee */
+
+#block-block-2 .content{
+	display: block;
+	width: 1160px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+#steering{
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding-top: 15px;
+	width: 100%;
+	height: 100px;
+}
+
+#committee{
+	display: block;
+	width: 1160px;
+	height: 100px;
+}
+
+#steering h2{
+	color: #959595;
+	font-size: 1.1em;
+	
+}
+
+div.com_member{
+	float: left;
+	width: 220px;
+	height: 100px;
+	font-size: 0.7em;
+}
+
+.com_name{
+	color: #0096d7;
+}
+
+
+/* Footer */
+#footer,
+#footer .section,
+#footer .section .region-footer{
+	height: 180px;
+	width: 100%;
+	background-color: #ececec;
+}
+
+#block-block-3{
+	display: block;
+	width: 100%;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+#DSU_footer{
+	display: inline-block;
+	background-color: #0096d7;
+	color: #ffffff;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#DSU{
+	float: left;
+	width: 200px;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+#copyright{
+	float: right;
+	width: 500px;
+	text-align: right;
+	padding: 10px;
+	margin-right: 20px;
+	font-size: 0.7em;
+}
