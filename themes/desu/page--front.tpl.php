@@ -51,10 +51,11 @@
 BECOME GREATER</h2>
 <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>ALUMNI/FRIENDS<br />
 			ANNUAL GIVING</td>
-<td><a href="https://dnbweb1.blackbaud.com/OPXDONATE/AddDonor.asp?cguid=056DD56B-E15D-430A-8CDE-E131E7869D0C&amp;sTarget=https%3A//dnbweb1.blackbaud.com/OPXDONATE/donate.asp%3Fcguid%3D056DD56B-E15D-430A-8CDE-E131E7869D0C%26dpid%3D10857&amp;sid=6EDA2F3A-D7D3-4C49-B3D1-9DC108B3D468"><img src="/sites/default/files/gto_14.jpg" /></a></td>
+<td><a href="http://www.desu.edu/development/dsu-alumni-friends-annual-giving"><img src="/sites/default/files/gto_14.jpg" /></a></td>
 </tr><tr><td>FACULTY/STAFF<br />
 			ANNUAL GIVING</td>
-<td><a href="http://www.desu.edu/development/faculty-and-staff-giving"><img src="/sites/default/files/gto_14.jpg" /></a></td>
+<td><a href="
+http://www.desu.edu/development/dsu-faculty-and-staff-annual-giving"><img src="/sites/default/files/gto_14.jpg" /></a></td>
 </tr></tbody></table><p><img src="/sites/default/files/gto_17.jpg" /></p></div>
 <div id="together"><img alt="" src="/sites/default/files/together_13.jpg" style="height:369px; width:824px" /><p id="front_p1">Every student who graduates from DSU is an extension of those who came before. When you support our campaign for students with a donation, you become part of the legacy that makes this University great. And take DSU one step closer to our goal of becoming the nation’s number one HBCU.</p>
 <p id="front_p2"><span class="hundred_percent">100%</span> of the funds raised through this initiative will directly benefit DSU students. That means more degrees earned. More potential realized. More futures transformed.</p>
