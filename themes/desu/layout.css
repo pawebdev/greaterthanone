@@ -1,40 +1,57 @@
 
-/**
- * @file
- * Stark layout method
- *
- * To avoid obscuring CSS added to the page by Drupal or a contrib module, the
- * Stark theme itself has no styling, except just enough CSS to arrange the page
- * in a traditional "Header, sidebars, content, and footer" layout.
- *
- * This layout method works reasonably well, but shouldn't be used on a
- * production site because it can break. For example, if an over-large image
- * (one that is wider than 20% of the viewport) is in the left sidebar, the
- * image will overlap with the #content to the right. The exception to this
- * is IE6 which will just hide the navigation block completely in these
- * instances due to a positioning bug.
+/*
+ *   DESU Styles
  */
 
+
+/*
+*   General styles
+*/
+
 body{
-	font-family: Arial;
+	font-family: 'Open Sans', Arial;
+	font-weight: 300;
+	font-size: 1em;
+	color: #555555;
 	margin: 0px;
 }
 
+h2{
+	color: #959595;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+h3{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+#page{
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#breadcrumb, #page-title, a.feed-icon, .front #block-system-main, #first-time{
+	display: none;
+}
+
+#content,
 #sidebar-first,
-#sidebar-second{
+#sidebar-second {
   float: left;
   display: inline;
   position: relative;
 }
 
-/*#content {
+#content {
   width: 100%;
 }
+
 body.sidebar-first #content {
   width: 80%;
-}*/
-body.sidebar-second #content {
-  width: 80%;
+  left: 20%; /* LTR */
 }
 body.two-sidebars #content {
   width: 60%;
@@ -50,24 +67,15 @@ body.two-sidebars #sidebar-first {
   left: -60%; /* LTR */
 }
 
-#sidebar-second {
-  float: right; /* LTR */
-  width: 20%;
-}
+
 
 /* Header */
-
-#main{
-	width: 100%;
-}
 
 #header{
 	background-color: #ececec;
 	height: 135px;
 	position: relative;
 }
-
-
 
 a#logo img{
 	position: absolute;
@@ -85,7 +93,9 @@ a#logo img{
 	top: 10px;
 }
 
-#blue_bar{
+/* Main Menu */
+
+#block-system-main-menu{
 	position: absolute;
 	top: 50px;
 	background-color: #0096d7;
@@ -94,26 +104,70 @@ a#logo img{
 	z-index: 0;
 }
 
+#block-system-main-menu .content{
+	float: left;
+	height: 40px;
+	margin-left: 290px;
+}
+
+#block-system-main-menu ul.menu{
+	float: left;
+	height: 40px;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-padding-start: 0px;
+}
+
+#block-system-main-menu ul.menu li{
+	display: inline;
+	float: left;
+	height: 40px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 18px;
+	padding-right: 18px;
+	background-color: #0096d7;
+}
+
+#block-system-main-menu ul.menu li a{
+	display: inline;
+	float: left;
+	height: 40px;
+	font-family: 'PT Serif';
+	font-weight: 700;
+	font-size: 18px;
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#block-system-main-menu ul.menu li.active-trail{
+	background-color: #0058b5;
+}
+
 /* Content */
 
-#content{
-	width: 1160px;
-	height: 650px;
-	margin-left: auto;
-	margin-right: auto;
+body.front{
+	background: url("images/bg_01.jpg");
+	background-repeat: repeat-x;
 }
+
 
 #main{
-	height: 650px;
-	text-align: center;
+	width: 1155px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
 }
 
-#page-title{
-	display: none;
+body.sidebar-second #content {
+  width: 824px;
 }
 
-.front #block-system-main{
-	display: none;
+#block-block-7{
+	margin-top: 75px;
 }
 
 #block-block-4{
@@ -136,7 +190,8 @@ a#logo img{
 	text-align: left;
 }
 
-.hundred_percent{
+div.hundred_percent{
+	color: #8bd7f8;
 	float: left;
 	font-weight: bold;
 	font-size: 2em;
@@ -166,6 +221,18 @@ a#logo img{
 
 /* Sidebar */
 
+#sidebar-second {
+  float: right; /* LTR */
+  width: 308px;
+}
+
+.section {
+  margin: 0px;
+}
+
+#block-block-6 p{
+	margin: 0px;
+}
 
 #greater{
 	float: right;
@@ -198,29 +265,23 @@ a#logo img{
 
 /* Steering Committee */
 
-#block-block-2 .content{
-	display: block;
-	width: 1160px;
-	height: 150px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
+body.front #main-wrapper{
+	background: url("images/bg_11.jpg");
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+#block-block-2{
+	margin-top:60px;
+	margin-bottom: 20px;
+	overflow: auto;
 }
 
 #steering{
-	display: block;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	padding-top: 15px;
-	width: 100%;
-	height: 100px;
 }
 
 #committee{
 	display: block;
-	width: 1160px;
-	height: 100px;
 }
 
 #steering h2{
@@ -232,8 +293,9 @@ a#logo img{
 div.com_member{
 	float: left;
 	width: 220px;
-	height: 100px;
+	height: 60px;
 	font-size: 0.7em;
+	color: #555555;
 }
 
 .com_name{
@@ -242,31 +304,23 @@ div.com_member{
 
 
 /* Footer */
-#footer,
-#footer .section,
-#footer .section .region-footer{
-	height: 180px;
-	width: 100%;
-	background-color: #ececec;
+#main-wrapper{
+	padding-bottom: 40px;
 }
 
-#block-block-3{
-	display: block;
+#footer{
 	width: 100%;
-	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
+	height:40px;
+	position:absolute;
+	bottom:0;
+	left:0;
 }
 
 #DSU_footer{
-	display: inline-block;
 	background-color: #0096d7;
 	color: #ffffff;
 	width: 100%;
-	position: absolute;
-	left: 0px;
-	top: 0px;
+	height: 40px;
 }
 
 #DSU{
@@ -284,4 +338,164 @@ div.com_member{
 	padding: 10px;
 	margin-right: 20px;
 	font-size: 0.7em;
+}
+
+/* Subpage Styles */
+
+body.page-node-1, body.page-node-2, body.page-node-3, body.page-node-4, body.page-node-5, body.page-node-8{
+	background: url("images/bgsolid_01.jpg");
+	background-repeat: repeat-x;
+}
+
+/*body.page-node-3{
+    background-size: 400px 400px;
+}*/
+
+
+/* About Styles */
+
+#every-donation{
+	background-color: #0096d7;
+	width: 764px;
+	color: #ffffff;
+	padding: 10px 30px 10px 30px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+#every-donation h2{
+	color: #ffffff;
+}
+
+
+
+/* Ways to Give */
+
+#join-the-swarm{
+	background: url("images/swarm_11.jpg");
+	height: 524px;
+	width: 824px;
+	margin-top: 100px;
+}
+
+#i-joined-the-swarm{
+	background-color: #8bd7f8;
+	width: 824px;
+	height: 222px;
+	color: #ffffff;
+	margin-top: -20px;
+}
+
+#i-joined-the-swarm img{
+	float: right;
+	margin: -20px 20px 0px 60px;
+}
+
+
+#i-joined-the-swarm p{
+	padding: 15px;
+}
+
+#ways-to-join{
+	margin-top: 60px;
+}
+
+#ways-to-join-table tbody{
+	border-top: none;
+}
+
+/* Impact Styles  */
+
+#allocation-of-funds p{
+	-webkit-margin-after: 0px;
+	-webkit-margin-before: 2em;
+}
+
+#allocation-of-funds ul{
+-webkit-margin-before: 0px;
+}
+
+#success-stories{
+	background-color: #8bd7f8;
+	width: 764px;
+	color: #ffffff;
+	padding: 10px 30px 10px 30px;
+	margin-bottom: 80px;
+	margin-top: 40px;
+}
+
+#success-stories a, #success-stories h2{
+	color: #ffffff;
+}
+
+/* Donors Style */
+#herbert-milan, #kevin-wright{
+	margin-top: 30px;
+}
+
+#herbert-milan, #kevin-wright, #herbert-milan h2{
+	color: #0096d7;
+}
+
+#kevin-wright h3, #herbert-milan h3{
+	-webkit-margin-after: 0px;
+}
+
+#kevin-wright h3, #herbert-milan p{
+	-webkit-margin-before: 0px;
+}
+
+
+#herbert-milan img{
+	margin: 20px 0px 30px 30px;
+}
+
+#kevin-wright img{
+	margin: 20px 30px 30px 0px;
+}
+
+#people-who-have-joined{
+	background-color: #0096d7;
+	width: 764px;
+	color: #ffffff;
+	padding: 10px 30px 10px 30px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	height: 300px;
+    overflow: scroll;
+}
+
+#people-who-have-joined h2{
+	color: #ffffff;
+}
+
+/* Contact Styles */
+
+#office-of-development{
+	margin-top: 30px;
+}
+
+#office-of-development h2, #office-of-development em{
+	color:#0096d7;
+
+}
+
+#office-of-development a{
+	color: #ed1b2e;
+}
+
+/* Success Stories */
+div.success{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 824px;
+	overflow: auto;
+}
+
+div.success img{
+	margin: 20px 30px 30px 0px;
+}
+
+div.success img.right{
+	margin: 20px 0px 30px 30px;
 }
