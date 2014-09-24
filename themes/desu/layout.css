@@ -27,6 +27,10 @@ h3{
 	font-size: 1.1em;
 }
 
+p.text-blue{
+	color:#0096d7;
+}
+
 #page{
 	min-height: 100%;
 	width: 100%;
@@ -71,14 +75,26 @@ body.two-sidebars #sidebar-first {
 
 /* Header */
 
+
 #header{
 	background-color: #ececec;
 	height: 135px;
+	width:100%;
 	position: relative;
 }
 
+/*
+#header{
+	background-color: #ececec;
+	height: 135px;
+	width:1155px;
+	margin:auto;
+	position: relative;
+}
+*/
+
 a#logo img{
-	position: absolute;
+	position: absolute;	
 	display: inline-block;
 	z-index: 100;
 }
@@ -113,6 +129,7 @@ a#logo img{
 #block-system-main-menu ul.menu{
 	float: left;
 	height: 40px;
+	margin:0px;	
 	-webkit-margin-before: 0px;
 	-webkit-margin-after: 0px;
 	-webkit-padding-start: 0px;
@@ -342,8 +359,13 @@ div.com_member{
 
 /* Subpage Styles */
 
-body.page-node-1, body.page-node-2, body.page-node-3, body.page-node-4, body.page-node-5, body.page-node-8{
+body.page-node-2, body.page-node-3, body.page-node-4, body.page-node-5, body.page-node-8{
 	background: url("images/bgsolid_01.jpg");
+	background-repeat: repeat-x;
+}
+
+body.page-node-1{
+	background: url("images/bgsolid_node1.jpg");
 	background-repeat: repeat-x;
 }
 
@@ -359,7 +381,7 @@ body.page-node-5{
 /* About Styles */
 
 #every-donation{
-	background-color: #0096d7;
+	background-color: #8bd7f8;
 	width: 764px;
 	color: #ffffff;
 	padding: 10px 30px 10px 30px;
@@ -371,25 +393,36 @@ body.page-node-5{
 	color: #ffffff;
 }
 
+#every-donation ul{
+	padding:0px 0px 0px 20px;
+}
+#every-donation ul li{padding-bottom:3px;}
+
 
 #graduation-rates{
-	overflow: auto;
+	overflow: auto;	
 }
 
 #graduation-rates-box{
-	float: left;
+	float: left;	
 }
 
 #graduation-rates-box table{
 	background-color: #ed1b2e;
 	color: #ffffff;
-	margin-right: 20px;
+	margin: 0px 20px 0px 0px;
 }
 
 #graduation-rates-box h2{
 	color: #ffffff;
+	margin:0px;
+	padding:0px;
 	-webkit-margin-after: 0px;
 	-webkit-margin-before: 0px;
+}
+
+#graduation-rates-box p{
+	margin-top:0px;
 }
 
 #graduation-rates-box tbody{
@@ -399,6 +432,11 @@ body.page-node-5{
 #graduation-rates-box td{
 	text-align: center;
 	padding: 10px;
+}
+
+#graduation-rates-text{
+	padding-top:10px;
+
 }
 
 #graduation-rates-box td p{
@@ -453,8 +491,16 @@ body.page-node-5{
 }
 
 #allocation-of-funds ul{
--webkit-margin-before: 0px;
+	margin:0px;
+	padding-left: 20px;
+	-webkit-margin-before: 0px;
 }
+
+#allocation-of-funds ul li ul{
+	padding-left: 45px;
+	list-style-type: disc;
+}
+
 
 #success-stories{
 	background-color: #8bd7f8;
@@ -533,6 +579,7 @@ body.page-node-5{
 
 #office-of-development a{
 	color: #ed1b2e;
+	text-decoration: none;
 }
 
 /* Success Stories */
