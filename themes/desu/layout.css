@@ -89,15 +89,6 @@ body.two-sidebars #sidebar-first {
 	position: relative;
 }
 
-/*
-#header{
-	background-color: #ececec;
-	height: 135px;
-	width:1155px;
-	margin:auto;
-	position: relative;
-}
-*/
 
 a#logo img{
 	position: absolute;	
@@ -348,13 +339,15 @@ div.com_member{
 	height: 40px;
 }
 
-#DSU{
+#DSU{	
 	float: left;
 	width: 200px;
 	padding: 10px;
 	font-weight: bold;
-	font-size: 1em;
+	font-size: 1em;	
 }
+
+#DSU a{text-decoration: none; color: #fff; font-weight: bold; font-size: 1em;	 }
 
 #copyright{
 	float: right;
@@ -378,7 +371,7 @@ body.page-node-1{
 }
 
 body.page-node-2{
-	 background-size: 1px 850px;
+	 background-size: 1px 600px;
 }
 
 body.page-node-4{
@@ -459,17 +452,19 @@ body.page-node-5{
 
 /* Ways to Give */
 
+.page-node-2 .region-sidebar-second p{margin:0px;}
+
 div.pl-30{
 	margin:0px;
 	padding:0px 0px 0px 30px;
 }
 
 #join-the-swarm{	
-	background: url("images/swarm_11.png") no-repeat;
+	background: url("images/swarm_11.jpg") no-repeat;
 	height: 524px;
 	width: 824px;
-	padding-top: 80px;
-	margin-top:-30px;
+	padding-top: 20px;
+	margin-top:50px;
 }
 
 #i-joined-the-swarm{
@@ -477,7 +472,7 @@ div.pl-30{
 	width: 824px;
 	height: 222px;
 	color: #ffffff;
-	margin-top: 80px;
+	margin-top: 50px;
 	
 }
 
@@ -498,7 +493,7 @@ div.pl-30{
 #ways-to-join h2{ color: #ed1b2e;}
 
 #ways-to-join-table{
-	margin-top:60px;
+	margin-top:300px;
 }
 
 #ways-to-join-table tbody{
